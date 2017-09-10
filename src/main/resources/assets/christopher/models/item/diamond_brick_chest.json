@@ -1,0 +1,7 @@
+{
+    "parent": "christopher:block/diamond_brick_chest",
+    "textures": {
+            "texture": "christopher:blocks/chests/diamond_brick",
+            "particle": "christopher:blocks/chests/diamond_brick"
+            }
+}

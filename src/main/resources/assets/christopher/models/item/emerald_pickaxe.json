@@ -1,0 +1,6 @@
+{
+    "parent": "item/handheld",
+    "textures": {
+        "layer0": "christopher:items/emerald_pickaxe"
+    }
+}
