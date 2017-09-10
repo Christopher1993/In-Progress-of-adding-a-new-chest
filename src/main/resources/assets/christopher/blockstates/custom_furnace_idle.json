@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "christopher:custom_furnace_idle", "y": 0},
+        "facing=south": { "model": "christopher:custom_furnace_idle", "y": 180},
+        "facing=west":  { "model": "christopher:custom_furnace_idle", "y": 270 },
+        "facing=east":  { "model": "christopher:custom_furnace_idle", "y": 90 }
+    }
+}

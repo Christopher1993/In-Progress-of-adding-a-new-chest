@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "normal": { "model": "christopher:diamond_brick_chest" },
+        "inventory": { "model": "christopher:diamond_brick_chest" },
+        "facing=north": { "model": "christopher:diamond_brick_chest" },
+        "facing=south": { "model": "christopher:diamond_brick_chest" },
+        "facing=west":  { "model": "christopher:diamond_brick_chest" },
+        "facing=east":  { "model": "christopher:diamond_brick_chest" }
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "half=bottom": { "model": "christopher:diamond_brick_slab_bottom" },
+        "half=top": { "model": "christopher:diamond_brick_slab_top" }
+    }
+}
