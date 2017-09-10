@@ -1,0 +1,16 @@
+[
+{
+  "modid": "christopher",
+  "name": "Remake of First Mod",
+  "description": "Addition of Diamond Brick Chest.",
+  "version": "2.5",
+  "mcversion": "1.12",
+  "url": "https://www.youtube.com/c/Christopher1993",
+  "updateUrl": "",
+  "authorList": ["Christopher_1993", "Harry's Tech Reviews", "MrCrayfish", "Champion Ash5357"],
+  "credits": "The Forge and FML guys, for making this example",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
