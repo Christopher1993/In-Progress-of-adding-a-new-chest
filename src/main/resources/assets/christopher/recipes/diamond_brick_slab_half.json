@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "slab",
+  "pattern": [
+    "DDD",
+    "   ",
+    "   "
+  ],
+  "key": {
+    "D": {
+      "item": "christopher:diamond_brick"
+    }
+  },
+  "result": {
+    "item": "christopher:diamond_brick_slab_half",
+    "data": 0,
+    "count": 6
+  }
+}

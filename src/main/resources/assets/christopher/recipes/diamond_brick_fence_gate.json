@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "FFF",
+    "FFF",
+    "   "
+  ],
+  "key": {
+    "F": {
+      "item": "christopher:diamond_brick_fence"
+    }
+  },
+  "result": {
+    "item": "christopher:diamond_brick_fence_gate",
+    "count": 4
+  }
+}

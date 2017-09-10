@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "DDD",
+    "DDD",
+    "   "
+  ],
+  "key": {
+    "D": {
+      "item": "christopher:diamond_brick"
+    }
+  },
+  "result": {
+    "item": "christopher:diamond_brick_fence",
+    "count": 4
+  }
+}

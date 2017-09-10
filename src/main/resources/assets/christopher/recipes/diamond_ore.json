@@ -2,20 +2,19 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "CCC",
-    "COC",
+    "CDC",
     "CCC"
   ],
   "key": {
     "C": {
       "item": "minecraft:cobblestone"
     },
-    "O": {
-      "item": "minecraft:coal",
-      "data": 0
+    "D": {
+      "item": "minecraft:diamond"
     }
   },
   "result": {
-    "item": "minecraft:coal_ore",
+    "item": "minecraft:diamond_ore",
     "count": 8
   }
 }

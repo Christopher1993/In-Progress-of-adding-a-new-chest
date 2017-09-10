@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "DDD",
+    "DFD",
+    "DDD"
+  ],
+  "key": {
+    "D": {
+      "item": "christopher:diamond_brick"
+    },
+    "F": {
+      "item": "minecraft:furnace"
+      }
+  },
+  "result": {
+    "item": "christopher:custom_furnace_idle"
+  }
+}

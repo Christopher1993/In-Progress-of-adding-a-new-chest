@@ -2,20 +2,20 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "CCC",
-    "COC",
+    "CLC",
     "CCC"
   ],
   "key": {
     "C": {
       "item": "minecraft:cobblestone"
     },
-    "O": {
-      "item": "minecraft:coal",
-      "data": 0
+    "L": {
+      "item": "minecraft:dye",
+      "data": 4
     }
   },
   "result": {
-    "item": "minecraft:coal_ore",
+    "item": "minecraft:lapis_ore",
     "count": 8
   }
 }
