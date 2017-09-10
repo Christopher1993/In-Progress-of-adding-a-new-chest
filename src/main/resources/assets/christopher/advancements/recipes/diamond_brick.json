@@ -2,27 +2,16 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "minecraft:coal_ore"
+      "christopher:diamond_brick"
     ]
   },
   "criteria": {
-    "has_coal": {
+    "has_diamond_block": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "minecraft:coal",
-            "data": 0
-          }
-        ]
-      }
-    },
-     "has_cobblestone": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:cobblestone"
+            "item": "minecraft:diamond_block"
           }
         ]
       }
@@ -30,14 +19,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "minecraft:coal_ore"
+        "recipe": "christopher:diamond_brick"
       }
     }
   },
   "requirements": [
     [
-      "has_coal",
-      "has_cobblestone",
+      "has_diamond_block",
       "has_the_recipe"
     ]
   ]

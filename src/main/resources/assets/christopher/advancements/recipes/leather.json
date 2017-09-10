@@ -2,27 +2,16 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "minecraft:coal_ore"
+      "minecraft:leather"
     ]
   },
   "criteria": {
-    "has_coal": {
+    "has_rotten_flesh": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "minecraft:coal",
-            "data": 0
-          }
-        ]
-      }
-    },
-     "has_cobblestone": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:cobblestone"
+            "item": "minecraft:rotten_flesh"
           }
         ]
       }
@@ -30,14 +19,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "minecraft:coal_ore"
+        "recipe": "minecraft:leather"
       }
     }
   },
   "requirements": [
     [
-      "has_coal",
-      "has_cobblestone",
+      "has_rotten_flesh",
       "has_the_recipe"
     ]
   ]

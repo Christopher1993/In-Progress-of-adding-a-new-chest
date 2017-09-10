@@ -2,17 +2,16 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "minecraft:coal_ore"
+      "minecraft:emerald_ore"
     ]
   },
   "criteria": {
-    "has_coal": {
+    "has_emerald": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "minecraft:coal",
-            "data": 0
+            "item": "minecraft:emerald"
           }
         ]
       }
@@ -30,13 +29,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "minecraft:coal_ore"
+        "recipe": "minecraft:emerald_ore"
       }
     }
   },
   "requirements": [
     [
-      "has_coal",
+      "has_emerald",
       "has_cobblestone",
       "has_the_recipe"
     ]

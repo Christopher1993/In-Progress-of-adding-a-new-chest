@@ -2,17 +2,16 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "minecraft:coal_ore"
+      "minecraft:gold_ore"
     ]
   },
   "criteria": {
-    "has_coal": {
+    "has_gold_ingot": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "minecraft:coal",
-            "data": 0
+            "item": "minecraft:gold_ingot"
           }
         ]
       }
@@ -30,13 +29,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "minecraft:coal_ore"
+        "recipe": "minecraft:gold_ore"
       }
     }
   },
   "requirements": [
     [
-      "has_coal",
+      "has_gold_ingot",
       "has_cobblestone",
       "has_the_recipe"
     ]
