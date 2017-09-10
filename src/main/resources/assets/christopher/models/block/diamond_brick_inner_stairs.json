@@ -1,0 +1,8 @@
+{
+    "parent": "block/inner_stairs",
+    "textures": {
+        "bottom": "christopher:blocks/diamond_brick",
+        "top": "christopher:blocks/diamond_brick",
+        "side": "christopher:blocks/diamond_brick"
+    }
+}

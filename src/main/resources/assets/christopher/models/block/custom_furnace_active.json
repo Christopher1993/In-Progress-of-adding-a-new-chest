@@ -1,0 +1,8 @@
+{
+    "parent": "block/orientable",
+    "textures": {
+        "top": "christopher:blocks/diamond_brick",
+        "front": "blocks/furnace_front_on",
+        "side": "christopher:blocks/diamond_brick"
+    }
+}
