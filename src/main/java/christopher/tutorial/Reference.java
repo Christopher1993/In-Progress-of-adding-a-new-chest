@@ -10,5 +10,5 @@ public class Reference
 	public static final String COMMONPROXY = "christopher.tutorial.proxy.CommonProxy";
 	
 	public static final int GUI_CUSTOMFURNACE = 0;
-	public static final int GUI_DIAMONDCHEST = 0;
+	public static final int GUI_DIAMONDCHEST = 1;
 }
