@@ -352,20 +352,7 @@ public class TileEntityDiamondChest extends TileEntityLockableLoot implements IT
     
     public net.minecraftforge.items.VanillaDoubleChestItemHandler doubleChestHandler;
     
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> T getCapability(net.minecraftforge.common.capabilities.Capability<T> capability, @Nullable net.minecraft.util.EnumFacing facing)
-    {
-        if (capability == net.minecraftforge.items.CapabilityItemHandler.ITEM_HANDLER_CAPABILITY)
-        {
-            TileEntityChest chest = null;
-			if(doubleChestHandler == null || doubleChestHandler.needsRefresh())
-                doubleChestHandler = net.minecraftforge.items.VanillaDoubleChestItemHandler.get(chest);
-            if (doubleChestHandler != null && doubleChestHandler != net.minecraftforge.items.VanillaDoubleChestItemHandler.NO_ADJACENT_CHESTS_INSTANCE)
-                return (T) doubleChestHandler;
-        }
-        return super.getCapability(capability, facing);
-    }
+    
     
     public net.minecraftforge.items.IItemHandler getSingleChestHandler()
     {
