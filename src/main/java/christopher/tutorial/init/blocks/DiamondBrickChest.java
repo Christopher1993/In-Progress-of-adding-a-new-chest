@@ -175,9 +175,9 @@ public class DiamondBrickChest extends BlockContainer
         {
             TileEntity tileentity = worldIn.getTileEntity(pos);
 
-            if (tileentity instanceof TileEntityChest)
+            if (tileentity instanceof TileEntityDiamondChest)
             {
-                ((TileEntityChest)tileentity).setCustomName(stack.getDisplayName());
+                ((TileEntityDiamondChest)tileentity).setCustomName(stack.getDisplayName());
             }
         }
     }
@@ -455,13 +455,13 @@ public class DiamondBrickChest extends BlockContainer
     {
         TileEntity tileentity = worldIn.getTileEntity(pos);
 
-        if (!(tileentity instanceof TileEntityChest))
+        if (!(tileentity instanceof TileEntityDiamondChest))
         {
             return null;
         }
         else
         {
-            ILockableContainer ilockablecontainer = (TileEntityChest)tileentity;
+            ILockableContainer ilockablecontainer = (TileEntityDiamondChest)tileentity;
 
             if (!allowBlocking && this.isBlocked(worldIn, pos))
             {
@@ -487,11 +487,11 @@ public class DiamondBrickChest extends BlockContainer
                         {
                             if (enumfacing != EnumFacing.WEST && enumfacing != EnumFacing.NORTH)
                             {
-                                ilockablecontainer = new InventoryLargeChest("container.chestDouble", ilockablecontainer, (TileEntityDiamondChest)tileentity1);
+                                ilockablecontainer = new InventoryLargeChest("container.ContainerDiamondChest", ilockablecontainer, (TileEntityDiamondChest)tileentity1);
                             }
                             else
                             {
-                                ilockablecontainer = new InventoryLargeChest("container.chestDouble", (TileEntityDiamondChest)tileentity1, ilockablecontainer);
+                                ilockablecontainer = new InventoryLargeChest("container.ContainerDiamondChest", (TileEntityDiamondChest)tileentity1, ilockablecontainer);
                             }
                         }
                     }
