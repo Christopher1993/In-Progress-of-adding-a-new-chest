@@ -5,6 +5,7 @@ import christopher.tutorial.Tutorial;
 import christopher.tutorial.container.ContainerCustomFurnace;
 import christopher.tutorial.container.ContainerDiamondChest;
 import christopher.tutorial.gui.GuiCustomFurnace;
+import christopher.tutorial.gui.GuiDiamondChest;
 import christopher.tutorial.tileentity.TileEntityCustomFurnace;
 import christopher.tutorial.tileentity.TileEntityDiamondChest;
 import net.minecraft.entity.player.EntityPlayer;
@@ -16,6 +17,11 @@ import net.minecraftforge.fml.common.network.NetworkRegistry;
 
 public class GUIHandler implements IGuiHandler
 {
+	public GUIHandler()
+	{
+		NetworkRegistry.INSTANCE.registerGuiHandler(Tutorial.INSTANCE, this);
+	}
+	
 	public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) 
 	{
 		TileEntity entity = world.getTileEntity(new BlockPos(x,y,z));
@@ -29,10 +35,7 @@ public class GUIHandler implements IGuiHandler
 				{
 					return new ContainerCustomFurnace(player.inventory, (TileEntityCustomFurnace)entity);
 				}
-			}
-			
-			switch(ID)
-			{
+
 			case Reference.GUI_DIAMONDCHEST:
 				if(entity instanceof TileEntityDiamondChest)
 				{
@@ -60,19 +63,15 @@ public class GUIHandler implements IGuiHandler
 				}
 				
 				return null;
-			}
 			
-			switch(ID)
-			{
 			case Reference.GUI_DIAMONDCHEST:
 				if(entity instanceof TileEntityDiamondChest)
 				{
-					return new ContainerDiamondChest(player.inventory, (TileEntityDiamondChest)entity, player);
+					return new GuiDiamondChest(player.inventory, (TileEntityDiamondChest)entity);
 				}
+				return null;
 			}
 		}
-
-
 		return null;
 	}
 	
