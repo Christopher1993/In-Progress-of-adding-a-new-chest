@@ -481,18 +481,19 @@ public class DiamondBrickChest extends BlockContainer
                             return null;
                         }
 
-                        TileEntity tileentity1 = worldIn.getTileEntity(blockpos);
+                    }
+                    
+                    TileEntity tileentity1 = worldIn.getTileEntity(blockpos);
 
-                        if (tileentity1 instanceof TileEntityDiamondChest)
+                    if (tileentity1 instanceof TileEntityDiamondChest)
+                    {
+                        if (enumfacing != EnumFacing.WEST && enumfacing != EnumFacing.NORTH)
                         {
-                            if (enumfacing != EnumFacing.WEST && enumfacing != EnumFacing.NORTH)
-                            {
-                                ilockablecontainer = new InventoryLargeChest("container.ContainerDiamondChest", ilockablecontainer, (TileEntityDiamondChest)tileentity1);
-                            }
-                            else
-                            {
-                                ilockablecontainer = new InventoryLargeChest("container.ContainerDiamondChest", (TileEntityDiamondChest)tileentity1, ilockablecontainer);
-                            }
+                            ilockablecontainer = new InventoryLargeChest("container.DiamondBrickChest", ilockablecontainer, (TileEntityDiamondChest)tileentity1);
+                        }
+                        else
+                        {
+                            ilockablecontainer = new InventoryLargeChest("container.DiamondBrickChest", (TileEntityDiamondChest)tileentity1, ilockablecontainer);
                         }
                     }
                 }
