@@ -15,3 +15,4 @@ tile.diamond_brick_fence.name=Diamond Brick Fence
 tile.diamond_brick_fence_gate.name=Diamond Brick Fence Gate
 tile.custom_furnace_idle.name=Super Furnace
 tile.diamond_brick_chest.name=Diamond Brick Chest
+container.ContainerDiamondChest=Diamond Brick Chest
