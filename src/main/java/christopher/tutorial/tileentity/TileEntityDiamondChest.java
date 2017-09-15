@@ -234,12 +234,8 @@ public class TileEntityDiamondChest extends TileEntityLockableLoot implements IT
             {
                 if (entityplayer.openContainer instanceof ContainerDiamondChest)
                 {
-                    IInventory iinventory = ((ContainerDiamondChest)entityplayer.openContainer).getLowerChestInventory();
+                    IInventory iinventory = ((ContainerDiamondChest)entityplayer.openContainer).getChestInventory();
 
-                    if (iinventory == this || iinventory instanceof InventoryLargeChest && ((InventoryLargeChest)iinventory).isPartOfLargeChest(this))
-                    {
-                        ++this.numPlayersUsing;
-                    }
                 }
             }
         }
@@ -350,9 +346,21 @@ public class TileEntityDiamondChest extends TileEntityLockableLoot implements IT
         }
     }
     
-    public net.minecraftforge.items.VanillaDoubleChestItemHandler doubleChestHandler;
+    public christopher.tutorial.handlers.DiamondChestHandler doubleChestHandler;
     
-    
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> T getCapability(net.minecraftforge.common.capabilities.Capability<T> capability, @Nullable net.minecraft.util.EnumFacing facing)
+    {
+        if (capability == net.minecraftforge.items.CapabilityItemHandler.ITEM_HANDLER_CAPABILITY)
+        {
+            if(doubleChestHandler == null || doubleChestHandler.needsRefresh())
+                doubleChestHandler = christopher.tutorial.handlers.DiamondChestHandler.get(this);
+            if (doubleChestHandler != null && doubleChestHandler != christopher.tutorial.handlers.DiamondChestHandler.NO_ADJACENT_CHESTS_INSTANCE)
+                return (T) doubleChestHandler;
+        }
+        return super.getCapability(capability, facing);
+    }
     
     public net.minecraftforge.items.IItemHandler getSingleChestHandler()
     {
