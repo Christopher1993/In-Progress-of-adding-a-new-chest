@@ -86,8 +86,10 @@ public class ContainerDiamondChest extends Container
         this.lowerChestInventory.closeInventory(playerIn);
     }
 	
-	public IInventory getLowerChestInventory()
+	public IInventory getChestInventory()
     {
         return this.lowerChestInventory;
     }
+	
+	
 }
