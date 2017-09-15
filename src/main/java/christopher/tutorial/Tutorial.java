@@ -1,6 +1,9 @@
 package christopher.tutorial;
 
+import christopher.tutorial.handlers.TileEntityHandler;
 import christopher.tutorial.proxy.CommonProxy;
+import christopher.tutorial.tileentity.TileEntityDiamondChest;
+import christopher.tutorial.tileentity.renderers.TileEntityDiamondChestRenderer;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -25,6 +28,7 @@ public class Tutorial
 	public static void preInit(FMLPreInitializationEvent event)
 	{
 		proxy.preInit(event);
+		TileEntityHandler.register();
 	}
 	
 	@EventHandler
@@ -39,3 +43,4 @@ public class Tutorial
 		proxy.postInit(event);
 	}
 }
+
