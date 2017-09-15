@@ -67,7 +67,7 @@ public class GUIHandler implements IGuiHandler
 			case Reference.GUI_DIAMONDCHEST:
 				if(entity instanceof TileEntityDiamondChest)
 				{
-					return new GuiDiamondChest(player.inventory, (TileEntityDiamondChest)entity);
+					return new GuiDiamondChest((TileEntityDiamondChest)entity, player.inventory);
 				}
 				return null;
 			}
