@@ -337,7 +337,7 @@ public class DiamondBrickChest extends BlockContainer
         {
             if (this.isDoubleChest(worldIn, blockpos))
             {
-                return true;
+                return false;
             }
 
             ++i;
@@ -347,7 +347,7 @@ public class DiamondBrickChest extends BlockContainer
         {
             if (this.isDoubleChest(worldIn, blockpos1))
             {
-                return true;
+                return false;
             }
 
             ++i;
@@ -357,7 +357,7 @@ public class DiamondBrickChest extends BlockContainer
         {
             if (this.isDoubleChest(worldIn, blockpos2))
             {
-                return true;
+                return false;
             }
 
             ++i;
@@ -367,7 +367,7 @@ public class DiamondBrickChest extends BlockContainer
         {
             if (this.isDoubleChest(worldIn, blockpos3))
             {
-                return true;
+                return false;
             }
 
             ++i;
@@ -503,6 +503,7 @@ public class DiamondBrickChest extends BlockContainer
         }
     }
     
+    @Nullable
     public TileEntity createNewTileEntity(World worldIn, int meta)
     {
         return new TileEntityDiamondChest();
