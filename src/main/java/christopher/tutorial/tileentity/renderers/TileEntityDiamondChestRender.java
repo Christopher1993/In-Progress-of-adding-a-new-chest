@@ -20,14 +20,13 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class TileEntityDiamondChestRenderer extends TileEntitySpecialRenderer<TileEntityDiamondChest>
 {
     private static final ResourceLocation TEXTURE_DIAMOND_NORMAL = new ResourceLocation("christopher","textures/models/chest/diamond_brick.png");
+    private static final ResourceLocation TEXTURE_DIAMOND_NORMAL_DOUBLE = new ResourceLocation("christopher", "textures/models/chest/diamond_brick_double.png");
     private final ModelChest simpleChest = new ModelChest();
-    private Random random;
-    private ModelChest model;
+    private final ModelChest largeChest = new ModelLargeChest();
     
     public TileEntityDiamondChestRenderer()
     {
-    	this.model = new ModelChest();
-    	this.random = new Random();
+    	
     }
 
     public void render(TileEntityDiamondChest te, double x, double y, double z, float partialTicks, int destroyStage, float alpha)
@@ -57,7 +56,7 @@ public class TileEntityDiamondChestRenderer extends TileEntitySpecialRenderer<Ti
 
         if (te.adjacentChestZNeg == null && te.adjacentChestXNeg == null)
         {
-            ModelChest modelchest = null;
+            ModelChest modelchest;
 
             if (te.adjacentChestXPos == null && te.adjacentChestZPos == null)
             {
@@ -78,6 +77,25 @@ public class TileEntityDiamondChestRenderer extends TileEntitySpecialRenderer<Ti
                 }
             }
             else
+            {
+                modelchest = this.largeChest;
+
+                if (destroyStage >= 0)
+                {
+                    this.bindTexture(DESTROY_STAGES[destroyStage]);
+                    GlStateManager.matrixMode(5890);
+                    GlStateManager.pushMatrix();
+                    GlStateManager.scale(8.0F, 4.0F, 1.0F);
+                    GlStateManager.translate(0.0625F, 0.0625F, 0.0625F);
+                    GlStateManager.matrixMode(5888);
+                }
+                
+                else
+                {
+                    this.bindTexture(TEXTURE_DIAMOND_NORMAL_DOUBLE);
+                }
+            }
+            
             {
 
                 if (destroyStage >= 0)
