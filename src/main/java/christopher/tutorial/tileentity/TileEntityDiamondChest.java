@@ -80,7 +80,7 @@ public class TileEntityDiamondChest extends TileEntityLockableLoot implements IT
     
     public static void registerFixesChest(DataFixer fixer)
     {
-        fixer.registerWalker(FixTypes.BLOCK_ENTITY, new ItemStackDataLists(TileEntityChest.class, new String[] {"Items"}));
+        fixer.registerWalker(FixTypes.BLOCK_ENTITY, new ItemStackDataLists(TileEntityDiamondChest.class, new String[] {"Items"}));
     }
     
     public void readFromNBT(NBTTagCompound compound)
@@ -194,7 +194,7 @@ public class TileEntityDiamondChest extends TileEntityLockableLoot implements IT
         {
             TileEntity tileentity = this.world.getTileEntity(blockpos);
 
-            if (tileentity instanceof TileEntityChest)
+            if (tileentity instanceof TileEntityDiamondChest)
             {
                 TileEntityDiamondChest tileentitydiamondchest = (TileEntityDiamondChest)tileentity;
                 tileentitydiamondchest.setNeighbor(this, side.getOpposite());
