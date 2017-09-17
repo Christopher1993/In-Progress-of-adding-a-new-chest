@@ -3,6 +3,8 @@ package christopher.tutorial.init.blocks;
 import javax.annotation.Nullable;
 
 import christopher.tutorial.tileentity.TileEntityDiamondChest;
+import christopher.tutorial.init.blocks.DiamondBrickChest;
+import christopher.tutorial.init.BlockInit;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockChest;
 import net.minecraft.block.BlockContainer;
