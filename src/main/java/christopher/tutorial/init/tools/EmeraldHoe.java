@@ -1,8 +1,7 @@
 package christopher.tutorial.init.tools;
 
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemHoe;
-import net.minecraft.item.Item.ToolMaterial;
+import christopher.tutorial.Tutorial;
 
 public class EmeraldHoe extends ItemHoe 
 {
@@ -13,7 +12,7 @@ public class EmeraldHoe extends ItemHoe
 		super(material);
 		setUnlocalizedName("emerald_hoe");
 		setRegistryName("emerald_hoe");
-		this.setCreativeTab(CreativeTabs.TOOLS);
+		this.setCreativeTab(Tutorial.christophertab);
 		this.attackSpeed = 100;
 	}
 
