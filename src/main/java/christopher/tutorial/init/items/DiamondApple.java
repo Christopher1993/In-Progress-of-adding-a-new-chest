@@ -1,13 +1,12 @@
 package christopher.tutorial.init.items;
 
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.MobEffects;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
+import christopher.tutorial.Tutorial;
 
 public class DiamondApple extends ItemFood 
 {
@@ -17,7 +16,7 @@ public class DiamondApple extends ItemFood
 		super(amount, isWolfFood);
 		setUnlocalizedName("diamond_apple");
 		setRegistryName("diamond_apple");
-		setCreativeTab(CreativeTabs.FOOD);
+		setCreativeTab(Tutorial.christophertab);
 		this.setAlwaysEdible();
 	}
 
