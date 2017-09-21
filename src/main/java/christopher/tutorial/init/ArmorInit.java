@@ -1,9 +1,6 @@
 package christopher.tutorial.init;
 
-import christopher.tutorial.Reference;
-import christopher.tutorial.Tutorial;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
@@ -11,6 +8,8 @@ import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
+import christopher.tutorial.Reference;
+import christopher.tutorial.Tutorial;
 import christopher.tutorial.init.armor.EmeraldArmor;
 
 public class ArmorInit 
@@ -38,7 +37,7 @@ public class ArmorInit
 	public static void registerItem(Item item)
 	{
 		ForgeRegistries.ITEMS.register(item);
-		item.setCreativeTab(CreativeTabs.COMBAT);
+		item.setCreativeTab(Tutorial.christophertab);
 		
 		ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
 	}
