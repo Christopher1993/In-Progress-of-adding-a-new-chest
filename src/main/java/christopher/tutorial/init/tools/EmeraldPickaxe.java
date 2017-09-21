@@ -1,17 +1,18 @@
 package christopher.tutorial.init.tools;
 
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.ItemPickaxe;
-import net.minecraft.item.Item.ToolMaterial;
+import net.minecraft.item.ItemHoe;
+import christopher.tutorial.Tutorial;
 
-public class EmeraldPickaxe extends ItemPickaxe 
+public class EmeraldHoe extends ItemHoe 
 {
-	public EmeraldPickaxe(String name, ToolMaterial material) 
+	private int attackSpeed;
+
+	public EmeraldHoe(String name, ToolMaterial material) 
 	{
 		super(material);
-		setUnlocalizedName("emerald_pickaxe");
-		setRegistryName("emerald_pickaxe");
-		this.setCreativeTab(CreativeTabs.TOOLS);
+		setUnlocalizedName("emerald_hoe");
+		setRegistryName("emerald_hoe");
+		this.setCreativeTab(Tutorial.christophertab);
 		this.attackSpeed = 100;
 	}
 
