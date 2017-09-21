@@ -1,8 +1,7 @@
 package christopher.tutorial.init.tools;
 
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemSpade;
-import net.minecraft.item.Item.ToolMaterial;
+import christopher.tutorial.Tutorial;
 
 public class EmeraldShovel extends ItemSpade 
 {
@@ -11,7 +10,7 @@ public class EmeraldShovel extends ItemSpade
 		super(material);
 		setUnlocalizedName("emerald_shovel");
 		setRegistryName("emerald_shovel");
-		this.setCreativeTab(CreativeTabs.TOOLS);
+		this.setCreativeTab(Tutorial.christophertab);
 		this.attackSpeed = 100;
 	}
 
