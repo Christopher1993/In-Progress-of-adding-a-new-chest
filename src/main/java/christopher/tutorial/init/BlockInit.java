@@ -8,7 +8,9 @@ import christopher.tutorial.init.blocks.fence.DiamondBrickFence;
 import christopher.tutorial.init.blocks.fence.DiamondBrickFenceGate;
 import christopher.tutorial.init.blocks.slab.DiamondBrickDoubleSlab;
 import christopher.tutorial.init.blocks.slab.DiamondBrickHalfSlab;
+import christopher.tutorial.tabs.ChristopherTab;
 import christopher.tutorial.Reference;
+import christopher.tutorial.Tutorial;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.ItemMeshDefinition;
@@ -68,7 +70,7 @@ public class BlockInit
 	public static void registerBlock(Block block)
 	{
 		ForgeRegistries.BLOCKS.register(block);
-		block.setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
+		block.setCreativeTab(Tutorial.christophertab);
 		ItemBlock item = new ItemBlock(block);
 		item.setRegistryName(block.getRegistryName());
 		ForgeRegistries.ITEMS.register(item);
@@ -79,7 +81,7 @@ public class BlockInit
 	public static void registerBlock(Block block, ItemBlock itemblock)
 	{
 		ForgeRegistries.BLOCKS.register(block);
-		block.setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
+		block.setCreativeTab(Tutorial.christophertab);
 		itemblock.setRegistryName(block.getRegistryName());
 		ForgeRegistries.ITEMS.register(itemblock);
 		
@@ -92,3 +94,4 @@ public class BlockInit
 	}
 
 }
+
