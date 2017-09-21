@@ -2,16 +2,16 @@ package christopher.tutorial.init.tools;
 
 import java.util.Set;
 
-import com.google.common.collect.Sets;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemTool;
+import christopher.tutorial.Tutorial;
+
+import com.google.common.collect.Sets;
 
 public class EmeraldAxe extends ItemTool
 {
@@ -23,7 +23,7 @@ public class EmeraldAxe extends ItemTool
 		 super(material, EFFECTIVE_ON);
 		 setUnlocalizedName("emerald_axe");
 		 setRegistryName("emerald_axe");
-		 this.setCreativeTab(CreativeTabs.TOOLS);
+		 this.setCreativeTab(Tutorial.christophertab);
 		 this.attackSpeed = 100;
 	 }
 
