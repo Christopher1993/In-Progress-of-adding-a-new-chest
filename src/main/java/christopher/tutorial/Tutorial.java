@@ -1,9 +1,6 @@
 package christopher.tutorial;
 
-import christopher.tutorial.handlers.TileEntityHandler;
-import christopher.tutorial.proxy.CommonProxy;
-import christopher.tutorial.tileentity.TileEntityDiamondChest;
-import christopher.tutorial.tileentity.renderers.TileEntityDiamondChestRenderer;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -13,10 +10,15 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import christopher.tutorial.handlers.TileEntityHandler;
+import christopher.tutorial.proxy.CommonProxy;
+import christopher.tutorial.tabs.ChristopherTab;
 
 @Mod(modid =  Reference.MODID, name = Reference.NAME, version = Reference.VERSION)
 public class Tutorial 
 {
+	public static final CreativeTabs christophertab = new ChristopherTab("christophertab");
+	
 	@SidedProxy(clientSide = Reference.CLIENTPROXY, serverSide = Reference.COMMONPROXY)
 	public static CommonProxy proxy;
 	
@@ -43,4 +45,3 @@ public class Tutorial
 		proxy.postInit(event);
 	}
 }
-
